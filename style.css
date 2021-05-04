@@ -29,12 +29,13 @@ body{
 }
 
 .wrapping{
-    padding: 0px 170px;
+    width: 90vw;
+    margin: 0 auto;
 }
 
 .hello{
     background-color: var(--dark);
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,7 +53,7 @@ body{
 
 .navbar{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -61,7 +62,10 @@ body{
     margin: 15px 0px;
     position: relative;
     height: 150px;
-    width: 300px;
+    min-width: 150px;
+    width: 50vw;
+    max-width: 400px;
+    
 }
 
 .stack-top, .stack-bottom{
@@ -82,7 +86,7 @@ body{
 .stack-bottom{
     border: 2px solid var(--main-color);
     top: 10px;
-    left: -30px;
+    left: -10px;
     z-index: -1;
 }
 
@@ -90,12 +94,77 @@ body{
     color: white;
 }
 
+.project-cards{
+   display: grid;
+   align-items: center;
+   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+   gap: 10px;
+   margin: 30px 0px;
+}
+
+.project-card{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin: 1px;
+    overflow: hidden;
+}
+
+.project-overlay, .project-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.project-overlay{
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0);
+    left: -100%;
+    width: 100%;
+    text-align: center;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover > .project-overlay{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-title{
+    font-weight: bold;
+}
+
+.project-description{
+    text-align: center;
+    font-size: 14px;
+}
+
+.tech-logo{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+.project-open{
+   border: 1px solid black;
+}
+
 /* Buttons */
 .fill-button{
     position: relative;
     display: inline-block;
     padding: 10px 30px;
-    margin: 20px;
+    margin: 20px 0px;
     z-index: 0;
 
 }
@@ -147,7 +216,6 @@ a{
     font-weight: bold;
     border: 1px solid black;
     width: 200px;
-
     text-align: center;
 }
 
