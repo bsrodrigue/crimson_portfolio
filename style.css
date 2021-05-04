@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+    --light: #eeebdd;
+    --main-color: #ce1212;
+    --secondary-color: #810000;
+    --dark: #1b1717; 
+
+    --wrapping :100px;
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("./Quicksand.ttf");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+body{
+    font-family: "Cinzel";
+}
+
+.wrapping{
+    padding: 0px 170px;
+}
+
+.hello{
+    background-color: var(--dark);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 10%;
+
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hello-content{
+    text-align: center;
+    min-width: 300px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.stack-box{
+    margin: 15px 0px;
+    position: relative;
+    height: 150px;
+    width: 300px;
+}
+
+.stack-top, .stack-bottom{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stack-top{
+    background-color: black;
+    top: 0px;
+    left: 0px;
+}
+
+.stack-bottom{
+    border: 2px solid var(--main-color);
+    top: 10px;
+    left: -30px;
+    z-index: -1;
+}
+
+.stack-title{
+    color: white;
+}
+
+/* Buttons */
+.fill-button{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 20px;
+    z-index: 0;
+
+}
+
+.fill-button::before{
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    width: 0%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: 0.2s ease-in-out;
+    z-index: -1;
+}
+
+.fill-button:hover::before{
+    width: 100%;
+}
+
+.fill-button:hover{
+    color: white;
+}
+
+.discover-my-work{
+    border: 1px solid white;
+}
+
+/* Typography */
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.hello *{
+    color: white;
+}
+
+.hello-welcome{
+    font-weight: bolder;
+    margin: 30px;
+}
+
+.hello-description{
+    column-width: 30ch;
+}
+
+.navbar-link{
+    font-weight: bold;
+    border: 1px solid black;
+    width: 200px;
+
+    text-align: center;
+}
+
+.main-color{
+    color: var(--main-color);
+}
+
+.secondary-color{
+    color: var(--secondary-color);
+}
