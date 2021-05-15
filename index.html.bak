@@ -85,7 +85,7 @@
                     </div>
                     <img
                         class="project-img"
-                        src="./images/p1.webp"
+                        src="./images/p1.png"
                         alt=""
                         srcset=""
                     />
@@ -127,7 +127,7 @@
                     </div>
                     <img
                         class="project-img"
-                        src="./images/p2.webp"
+                        src="./images/p2.png"
                         alt=""
                         srcset=""
                     />
@@ -169,7 +169,7 @@
                     </div>
                     <img
                         class="project-img"
-                        src="./images/p3.webp"
+                        src="./images/p3.png"
                         alt=""
                         srcset=""
                     />
